@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>GSAP</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <style>
+    /*
+    CSS RESET START
+    */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* Remove default margin */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    figure,
+    blockquote,
+    dl,
+    dd {
+      margin: 0;
+    }
+
+    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role='list'],
+    ol[role='list'] {
+      list-style: none;
+    }
+
+    /* Set core root defaults */
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+
+    /* Set core body defaults */
+    body {
+      min-height: 100vh;
+      text-rendering: optimizeSpeed;
+      line-height: 1.5;
+    }
+
+    /* A elements that don't have a class get default styles */
+    a:not([class]) {
+      text-decoration-skip-ink: auto;
+    }
+
+    /* Make images easier to work with */
+    img,
+    picture {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Inherit fonts for inputs and buttons */
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+    @media (prefers-reduced-motion: reduce) {
+      html:focus-within {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /*
+    CSS RESET END
+    */
+
+    body {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    hr {
+      margin: 1rem 0;
+    }
+
+    .user-input {
+      width: 300px;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    textarea {
+      font-size: 11px;
+      height: 20rem;
+      width: 100%;
+      font-family: monospace;
+    }
+
+    iframe {
+      border-width: 0;
+      margin: 0 0.5rem;
+    }
+  </style>
+  <script defer src="index.js"></script>
+
+</head>
+
+<body>
+  <div class="user-input">
+    <div class="line">
+      <label>JSON config:</label>
+      <textarea></textarea>
+    </div>
+    <div class="line">
+      <label>Título:</label>
+      <input type="text" id="title" />
+    </div>
+    <div class="line">
+      <label>Texto:</label>
+      <input type="text" id="text" />
+    </div>
+    <div class="line">
+      <label>Imagem:</label>
+      <input type="text" id="img" />
+    </div>
+    <hr>
+    <div class="line">
+      <button id="play">Play</button>
+      <button id="pause">Pause</button>
+      <button id="replay">Replay</button>
+      <button id="toggle">Toggle Bar</button>
+    </div>
+  </div>
+  <iframe sandbox="allow-scripts allow-same-origin" src="http://localhost:8080" scrolling="no" frameborder=0></iframe>
+</body>
+
+</html>
