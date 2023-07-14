@@ -80,10 +80,8 @@ page.refs.jsonConf.addEventListener('change', (ev) => {
 page.refs.title.addEventListener('change', (ev) => {
   try {
     const value = ev.target.value
-    if (value.length) {
-      page.values.titulo = value
-      page.hydrate()
-    }
+    page.values.titulo = value
+    page.hydrate()
   } catch (err) {
     console.warn(err)
   }
@@ -92,10 +90,8 @@ page.refs.title.addEventListener('change', (ev) => {
 page.refs.text.addEventListener('change', (ev) => {
   try {
     const value = ev.target.value
-    if (value.length) {
-      page.values.texto = value
-      page.hydrate()
-    }
+    page.values.texto = value
+    page.hydrate()
   } catch (err) {
     console.warn(err)
   }
@@ -116,10 +112,8 @@ page.refs.bgColor.addEventListener('change', (ev) => {
 page.refs.bgVideo.addEventListener('change', (ev) => {
   try {
     const value = ev.target.value
-    if (value.length) {
-      page.values.bgVideo = value
-      page.hydrate()
-    }
+    page.values.bgVideo = value
+    page.hydrate()
   } catch (err) {
     console.warn(err)
   }
@@ -128,10 +122,8 @@ page.refs.bgVideo.addEventListener('change', (ev) => {
 page.refs.img.addEventListener('change', (ev) => {
   try {
     const value = ev.target.value
-    if (value.length) {
-      page.values.imagem = value
-      page.hydrate()
-    }
+    page.values.imagem = value
+    page.hydrate()
   } catch (err) {
     console.warn(err)
   }
