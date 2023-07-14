@@ -5,12 +5,16 @@ function selectPage() {
       titulo: '',
       texto: '',
       imagem: '',
+      bgColor: '',
+      bgVideo: '',
     },
     refs: {
       jsonConf: document.querySelector('textarea'),
       title: document.querySelector('#title'),
       text: document.querySelector('#text'),
       img: document.querySelector('#img'),
+      bgColor: document.querySelector('#bgColor'),
+      bgVideo: document.querySelector('#bgVideo'),
       preview: document.querySelector('iframe'),
       play: document.querySelector('#play'),
       pause: document.querySelector('#pause'),
@@ -31,6 +35,8 @@ function selectPage() {
         titulo: this.values.titulo,
         texto: this.values.texto,
         imagem: this.values.imagem,
+        bgColor: this.values.bgColor,
+        bgVideo: this.values.bgVideo,
       }
       target.postMessage({item}, '*')
     }
@@ -88,6 +94,30 @@ page.refs.text.addEventListener('change', (ev) => {
     const value = ev.target.value
     if (value.length) {
       page.values.texto = value
+      page.hydrate()
+    }
+  } catch (err) {
+    console.warn(err)
+  }
+})
+
+page.refs.bgColor.addEventListener('change', (ev) => {
+  try {
+    const value = ev.target.value
+    if (value.length) {
+      page.values.bgColor = value
+      page.hydrate()
+    }
+  } catch (err) {
+    console.warn(err)
+  }
+})
+
+page.refs.bgVideo.addEventListener('change', (ev) => {
+  try {
+    const value = ev.target.value
+    if (value.length) {
+      page.values.bgVideo = value
       page.hydrate()
     }
   } catch (err) {
